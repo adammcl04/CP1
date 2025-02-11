@@ -28,6 +28,9 @@ public final class Enigma {
         // 2. Apply the CAESAR shift
         // 3. Return the decrypted string
 
+        // This is going to be amazing!
+        //I will encrypt.
+
         return "Implement the decrypt";
 
     }
