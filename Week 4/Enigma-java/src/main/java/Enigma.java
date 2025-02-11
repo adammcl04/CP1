@@ -30,6 +30,8 @@ public final class Enigma {
 
         // This is going to be amazing!
         //WE CAN GET THIS DONE!
+        //Okay I am actually going to start coding and whatever!!!
+        //Bacon
 
         return "Implement the decrypt";
 
