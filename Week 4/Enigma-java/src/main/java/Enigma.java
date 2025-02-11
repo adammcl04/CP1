@@ -29,7 +29,7 @@ public final class Enigma {
         // 3. Return the decrypted string
 
         // This is going to be amazing!
-        //I will encrypt.
+        //WE CAN GET THIS DONE!
 
         return "Implement the decrypt";
 
