@@ -28,6 +28,11 @@ public final class Enigma {
         // 2. Apply the CAESAR shift
         // 3. Return the decrypted string
 
+        // This is going to be amazing!
+        //WE CAN GET THIS DONE!
+        //Okay I am actually going to start coding and whatever!!!
+        //Bacon Decrypt
+
         return "Implement the decrypt";
 
     }
