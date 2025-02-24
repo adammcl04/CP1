@@ -18,7 +18,7 @@ namespace LuciansLusciousLasagna
         /// <returns>The expected time in the oven according to the recipe.</returns>
         public int ExpectedMinutesInOven()
         {
-            // TODO: Implement the 'ExpectedMinutesInOven()' method
+            return 40;
             throw new NotImplementedException("Please implement the ExpectedMinutesInOven() method");
 
         }
@@ -33,7 +33,7 @@ namespace LuciansLusciousLasagna
         /// in the oven.</returns>
         public int RemainingMinutesInOven(int durationInOven)
         {
-            // TODO: Implement the 'RemainingMinutesInOven()' method
+            return ExpectedMinutesInOven() - durationInOven;
             throw new NotImplementedException("Please implement the RemainingMinutesInOven() method");
 
 
@@ -48,7 +48,7 @@ namespace LuciansLusciousLasagna
         /// <returns>An integer representing the number of minutes it takes to prepare the lasagna.</returns>
         public int PreparationTimeInMinutes(int layers)
         {
-            // TODO: implement the 'PreparationTimeInMinutes()' method
+            return layers * 2;
             throw new NotImplementedException("Please implement the PreparationTimeInMinutes() method");
 
         }
@@ -66,7 +66,7 @@ namespace LuciansLusciousLasagna
         /// lasagna so far.</returns>
         public int ElapsedTimeInMinutes(int layers, int minutesInOven)
         {
-            // TODO: implement the 'ElapsedTimeInMinutes()' method
+            return PreparationTimeInMinutes(layers) + minutesInOven;
             throw new NotImplementedException("Please implement the ElapsedTimeInMinutes() method");
         }
     }

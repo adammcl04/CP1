@@ -22,6 +22,7 @@
 */
 
 using System;
+using System.Runtime.CompilerServices;
 
 namespace LeapYear
 {
@@ -37,6 +38,28 @@ namespace LeapYear
         public static bool IsLeapYear(int year)
         {
             //TODO Implement the IsLeapYear method
+            if (year % 4 == 0)
+            {
+                if (year % 100 == 0) {
+
+                    if (year % 400 == 0)
+                    {
+                        return true;
+                        Console.WriteLine("The year "+ year +" is a leap year");
+                    }
+                    else if (year % 400 != 0)
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+
+            else{
+                return false;
+            }
+
             throw new NotImplementedException("You need to implement this function.");
         }
     }
