@@ -44,7 +44,30 @@ namespace Assembly
         public static double SuccessRate(int speed)
         {
             // Todo: implement the method SuccessRate
+            if (speed > 0 & speed <= 4)
+            {
+                return 1;
+            }
+            else if (speed > 4 & speed <= 8)
+            {
+                return 0.90;
+            }
+            else if (speed == 9)
+            {
+                return 0.80;
+            }
+            else if (speed == 10)
+            {
+                return 0.77;
+            }
+            else
+            {
+                return 0;
+            }
+
+
             throw new NotImplementedException("Please implement the (static) AssemblyLine.SuccessRate() method");
+
         }
 
         /// <summary>
@@ -61,6 +84,11 @@ namespace Assembly
         public static double ProductionRatePerHour(int speed)
         {
             // Todo: implement the ProductionRatePerHour method
+            double rate = SuccessRate(speed);
+
+            return (221 * speed * rate);
+
+
             throw new NotImplementedException("Please implement the (static) AssemblyLine.ProductionRatePerHour() method");
         }
 
@@ -75,6 +103,16 @@ namespace Assembly
         public static int WorkingItemsPerMinute(int speed)
         {
             // Todo: Implement the WorkingItemsPerMinute method
+            if(speed == 0)
+            {
+                return 0;
+            }
+
+            double rph = (ProductionRatePerHour((int)speed))/60;
+            double result = Math.Truncate(rph);
+
+            return (int)result;
+
             throw new NotImplementedException("Please implement the (static) AssemblyLine.WorkingItemsPerMinute() method");
         }
     }

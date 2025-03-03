@@ -35,8 +35,11 @@ namespace BookingUpForBeauty
         /// <exception cref="NotImplementedException"></exception>
         public static DateTime Schedule(string appointmentDateDescription)
         {
-            //TODO: Implement the method as described in the document comments. 
-            throw new NotImplementedException("Please implement the (static) Appointment.Schedule() method");
+            //TODO: Implement the method as described in the document comments.
+
+            DateTime appointmentDate = DateTime.Parse(appointmentDateDescription);
+            return appointmentDate;
+
         }
 
         /// <summary>
@@ -52,7 +55,15 @@ namespace BookingUpForBeauty
         /// <exception cref="NotImplementedException"></exception>
         public static bool HasPassed(DateTime appointmentDate)
         {
-            //TODO: Implement the method as described in the document comments. 
+            //TODO: Implement the method as described in the document comments.
+            if (appointmentDate > DateTime.Now)
+            {
+                return false;
+            }
+            else {
+                return true;
+            }
+
             throw new NotImplementedException("Please implement the (static) Appointment.HasPassed() method");
         }
 
@@ -69,7 +80,17 @@ namespace BookingUpForBeauty
         /// <exception cref="NotImplementedException"></exception>
         public static bool IsAfternoonAppointment(DateTime appointmentDate)
         {
-            //TODO: Implement the method as described in the document comments. 
+            //TODO: Implement the method as described in the document comments.
+            int hourApp = appointmentDate.Hour;
+
+            if (hourApp > 12 && hourApp < 18)
+            {
+                return true;
+            }
+            else {
+                return false;
+            }
+
             throw new NotImplementedException("Please implement the (static) Appointment.IsAfternoonAppointment() method");
         }
 
@@ -84,7 +105,9 @@ namespace BookingUpForBeauty
         /// <exception cref="NotImplementedException"></exception>
         public static string Description(DateTime appointmentDate)
         {
-            //TODO: Implement the method as described in the document comments. 
+            //TODO: Implement the method as described in the document comments.
+            
+
             throw new NotImplementedException("Please implement the (static) Appointment.Description() method");
             // See: https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
         }
